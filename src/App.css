@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.headTitle {
+  color: blanchedalmond;
+  
+}
+
+.categoryOrder{
+ font-size: large;
+}
+
+.allCategory {
+  color:blue;
+}
