@@ -38,7 +38,7 @@
 }
 
 .headTitle {
-  color: blanchedalmond;
+  color: rebeccapurple;
   
 }
 
@@ -50,3 +50,13 @@
   color:blue;
   margin-right: auto;
 }
+
+.main {
+  background-color: lightblue;
+  margin:50px;
+  padding: 50px;
+  justify-content: space-around;
+  
+}
+
+

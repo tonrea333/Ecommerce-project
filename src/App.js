@@ -17,15 +17,6 @@ async function getCommerceData() {
   }); console.log(response)
   const allCat = await response.json()
  
-if(allCat){
-
-  for (let i = 0; i < allCat.length; i++) {
-    if(allCat[1].category ===  )
-  }
-
-  console.log(allCat[1].category)
-  console.log(allCat)
-}
 
   
 
@@ -45,8 +36,24 @@ async function getElectronisData() {
     },
 
   }); console.log(response)
-  const g = await response.json()
-  console.log(g)
+  const allElectronics = await response.json()
+  
+  let electronicsArray = []
+  
+  if(allElectronics){
+
+    for (let i = 0; i < allElectronics.length; i++) {
+      if(allElectronics[8].category === "electronics" ){
+        electronicsArray.push()
+console.log("hello electronics")
+console.log(electronicsArray)
+      }
+    }
+  
+    console.log(allElectronics[8].category)
+    console.log(allElectronics)
+  }
+  
   return
 }
 
@@ -62,8 +69,8 @@ async function getWClothingData() {
     },
 
   }); console.log(response)
-  const g = await response.json()
-  console.log(g)
+  const allWClothing= await response.json()
+  console.log(allWClothing)
   return
 }
 async function getMClothingData() {
@@ -78,8 +85,8 @@ async function getMClothingData() {
     },
 
   }); console.log(response)
-  const g = await response.json()
-  console.log(g)
+  const allMClothing = await response.json()
+  console.log(allMClothing)
   return 
 } 
 
@@ -299,7 +306,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div >
+      <div className="main" >
         <h1 className="headTitle">Shop All</h1>
         <div className="catatoryOrder">
           <button name="allCategory" onClick={this.handleGetCategories}>All Categories</button>
