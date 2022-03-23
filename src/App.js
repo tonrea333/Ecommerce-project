@@ -15,10 +15,73 @@ async function getCommerceData() {
     },
 
   }); console.log(response)
+  const allCat = await response.json()
+ 
+if(allCat){
+
+  for (let i = 0; i < allCat.length; i++) {
+    if(allCat[1].category ===  )
+  }
+
+  console.log(allCat[1].category)
+  console.log(allCat)
+}
+
+  
+
+
+
+  return
+}
+async function getElectronisData() {
+  const response = await fetch(`${serverURL}`, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "access-control-request-headers": "content-type",
+      "x-Trigger": "CORS",
+    },
+
+  }); console.log(response)
   const g = await response.json()
   console.log(g)
-  return g
-} getCommerceData()
+  return
+}
+
+async function getWClothingData() {
+  const response = await fetch(`${serverURL}`, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "access-control-request-headers": "content-type",
+      "x-Trigger": "CORS",
+    },
+
+  }); console.log(response)
+  const g = await response.json()
+  console.log(g)
+  return
+}
+async function getMClothingData() {
+  const response = await fetch(`${serverURL}`, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "access-control-request-headers": "content-type",
+      "x-Trigger": "CORS",
+    },
+
+  }); console.log(response)
+  const g = await response.json()
+  console.log(g)
+  return 
+} 
 
 
 
@@ -37,7 +100,7 @@ class App extends React.Component {
     super(props);
     this.state = {
 
-      
+
 
       id1: {
         category: "",
@@ -203,16 +266,29 @@ class App extends React.Component {
   }
 
 
-handleGetCategories = async (event) => {
-  const getCategories = await getCommerceData(this.state.id)
-if(getCategories){
+  handleGetCategories = async (event) => {
+    const getCategories = await getCommerceData(this.state.id)
   
-  console.log (getCategories)
-}
 
-}
+  }
+  handleGetElectronics = async (event) => {
+    const getElectronics = await getElectronisData(this.state.category)
+  }
 
+  handleGetWClothing = async (event) => {
+    const getWClothing = await getWClothingData(this.state)
+  }
 
+  handleGetMClothing = async (event) => {
+    const getMClothing = await getMClothingData(this.state.id)
+    // const clothMen = getMClothing.map(clothes)
+
+    // // function clothes(men){
+    // //   return men.category
+    // }
+
+   
+  }
 
 
 
@@ -232,9 +308,9 @@ if(getCategories){
           <button name="onlyMenClothing" onClick={this.handleGetMClothing}>Men's Clothing</button>
         </div>
         <div>
-          <div>Area 1</div>
-          <div>Area 2</div>
-          <div>Area 3</div>
+          <div className="menClothing">Area 1</div>
+          <div className="womenClothing">Area 2</div>
+          <div className="electronics">Area 3</div>
         </div>
 
       </div>
