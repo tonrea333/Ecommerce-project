@@ -40,13 +40,14 @@ async function getElectronisData() {
   
   let electronicsArray = []
   
-  if(allElectronics){
+  
 
     for (let i = 0; i < allElectronics.length; i++) {
-      if(allElectronics[8].category === "electronics" ){
-        electronicsArray.push()
-console.log("hello electronics")
-console.log(electronicsArray)
+      if(allElectronics === allElectronics[8].category ){
+         electronicsArray.push(allElectronics[8].category)
+// console.log("hello electronics")
+ console.log(electronicsArray)
+console.log(allElectronics[8].category)
       }
     }
   
@@ -54,8 +55,8 @@ console.log(electronicsArray)
     console.log(allElectronics)
   }
   
-  return
-}
+
+
 
 async function getWClothingData() {
   const response = await fetch(`${serverURL}`, {
