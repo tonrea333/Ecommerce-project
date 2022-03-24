@@ -314,7 +314,7 @@ class App extends React.Component {
           <button name="onlyWomenClothing" onClick={this.handleGetWClothing}>Women's Clothing</button>
           <button name="onlyMenClothing" onClick={this.handleGetMClothing}>Men's Clothing</button>
         </div>
-        <div>
+        <div className="topicDiv">
           <div className="menClothing">Area 1</div>
           <div className="womenClothing">Area 2</div>
           <div className="electronics">Area 3</div>

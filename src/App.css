@@ -43,7 +43,8 @@
 }
 
 .categoryOrder{
- font-size: large;
+ display:flex;
+ justify-content: space-between;
 }
 
 .allCategory {
@@ -59,4 +60,10 @@
   
 }
 
+.topicDiv {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
 
+}
